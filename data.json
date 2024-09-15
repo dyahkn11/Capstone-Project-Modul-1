@@ -1,0 +1,23 @@
+{
+    "customers": [
+        {
+            "py/object": "__main__.Customer",
+            "id": 1,
+            "name": "Lulu Cat",
+            "gender": "Female",
+            "phone_number": "61327361732",
+            "location_city": "Bandung",
+            "dob": "2006-09-05"
+        },
+        {
+            "py/object": "__main__.Customer",
+            "id": 3,
+            "name": "Lili",
+            "gender": "Male",
+            "phone_number": "621827189271",
+            "location_city": "Depok",
+            "dob": "2006-08-08"
+        }
+    ],
+    "lastId": 3
+}

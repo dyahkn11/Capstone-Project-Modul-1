@@ -12,6 +12,7 @@ class Customer:
         self.location_city = location_city
         self.dob = dob
 
+# Read Customer Data Function
 def read_customers(file_path: Path | str, customer_data: dict):
     if file_path.is_file():
         save_file = open(file_path, "r", encoding="utf-8")
@@ -29,12 +30,14 @@ def read_customers(file_path: Path | str, customer_data: dict):
     pprint.pp(customer_data)
     print()
 
+# Update Customer Data Function
 def update_customers(file_path: Path | str, customer_data: dict):
     json_data = jsonpickle.encode(customer_data, indent=4)
     save_file = open(file_path, "w", encoding="utf-8")
     save_file.write(json_data)
     save_file.close()
 
+# Start the Program
 if __name__ == "__main__":
     file_path = Path("data.json")
     customer_data = {"customers": [], "lastId": 0}
@@ -45,6 +48,8 @@ if __name__ == "__main__":
     #     ],
     #     "lastId": 0
     # }
+
+# Displaying Menus and Processing User Selection
     while True:
         print("Available options:")
         print("1. Create new customer")
@@ -57,7 +62,8 @@ if __name__ == "__main__":
             user_input = int(user_input)
         except:
             print("Input must be an integer.")
-        
+
+# Create New Customer Data
         if user_input == 1:
             print("Selected option: Create new customer")
             # customer_data["customers"]: list[Customer]
@@ -72,11 +78,13 @@ if __name__ == "__main__":
             customer_data["customers"].append(Customer(id, name, gender, phone_number, location_city, dob))
             update_customers(file_path, customer_data)
             print("New customer created!\n")
-        
+
+# Read Customer Data
         elif user_input == 2:
             print("Selected option: Read customer data")
             read_customers(file_path, customer_data)
-        
+
+# Update Customer Data
         elif user_input == 3:
             print("Selected option: Update customer data")
             while True:
@@ -104,7 +112,8 @@ if __name__ == "__main__":
                 update_customers(file_path, customer_data)
             else:
                 print(f"Customer with ID '{id}' not found.")
-        
+
+# Delete Existing Customer Data
         elif user_input == 4:
             print("Selected option: Delete existing customer")
             while True:
@@ -128,7 +137,8 @@ if __name__ == "__main__":
                 update_customers(file_path, customer_data)
             else:
                 print(f"Customer with ID '{id}' not found.")
-        
+
+# Exit Application        
         elif user_input == 5:
             print("Selected option: Exit application")
             print("Saving customer data...")

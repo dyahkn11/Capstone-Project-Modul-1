@@ -38,4 +38,5 @@
 3. Update customer data: Pilih opsi 3 untuk memperbaharui data pelanggan. Pilih pelanggan yang ingin diperbarui berdasarkan customer ID, lalu ikuti instruksi untuk memperbarui informasinya.
 4. Delete existing customer: Pilih opsi 4 dan masukkaan customer ID dari data pelanggan terkait yang ingin dihapus.
 5. Exit application: Pilih opsi 5 untuk menyimpan data dan keluar dari aplikasi.
+
 ![image](https://github.com/user-attachments/assets/ac158ab2-105b-4893-b560-d89e650418f6)
